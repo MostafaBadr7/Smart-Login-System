@@ -1,0 +1,147 @@
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Media 1 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+@media screen and (max-width:768px) {
+        /*............................. Validation MSG ..............................*/
+
+    .warning-msg-signout {
+        width: 40% !important;
+        height: 20% !important;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.0) !important;
+    }
+
+    /*..............................smart login system h1 Signup page .......................................*/
+
+    .paragraph-welcome  {
+        width :200px;
+        height:200px;
+    }
+
+    /*.......................... Parts of full name guiding msgs for the user ...................*/
+
+.validation-bar-name, .validation-bar-email, .validation-bar-pass {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content:flex-end !important;
+    flex-wrap: wrap !important;
+    text-align: center !important;
+    width: 100%;
+    font-size: 0.9rem;
+    /* display: none !important; */
+    transition: all 2s;
+    position: absolute;
+    top:110%
+ }
+ .validation-bar-name{
+    display: flex !important;
+    justify-content: center !important;
+}
+  /*................................. press on input > show check msgs ....................... */
+
+ #signNameInput:focus + .validation-bar-name{
+    opacity:1  !important;
+    transition: all 2s;
+ }
+
+ #signEmailInput:focus + .validation-bar-email{
+    opacity:1  !important;
+    transition: all 2s;
+
+ }
+ #signPassInput:focus + .validation-bar-pass{
+    opacity:1  !important;
+    transition: all 2s;
+
+ }
+.passcheck-8-or-more{
+    width: 100% !important;
+}
+.namecheck{
+    width: 55% !important;
+    display: inline-block;
+    text-align: center !important;
+}
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Media 2 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+@media screen and (max-width:370px) {
+            /*............................. Validation MSG ..............................*/
+
+    #warningBoxMsg-signout{
+        font-size: 1.2rem;
+    }
+    .warning-msg-signout {
+        width: 60% !important;
+        height: 20% !important;
+    }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Media 3 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+@media screen and (max-width:290px) {
+    /* --------------------------- Welcome page logout button --------------------------------------- */
+
+    .logout  {
+        align-self: center !important;
+     }
+
+    /* -----------------------------------Input Signup page--------------------------------------- */
+    input{
+        width: 140px;
+        padding: 3px;
+
+        text-align:center !important;
+
+    }
+
+    /*................................smart login system h1 Signup page .......................................*/
+    .head-paragraph h1{
+        font-size: 1rem;
+        text-align:center !important;
+        padding: 0 !important;
+    }
+    #signBtn{
+        width: 100px;
+        text-align:center !important;
+    }
+   
+   
+   /*.................................. Signup Area .....................................*/
+    .form{
+        align-items: center !important;
+    }
+    .login-box{
+        padding: 35px;
+    }
+    input{
+        font-size: 0.5rem;
+    }
+    ::placeholder{
+        font-size: 0.5rem;
+    }
+    .passcheck-numbers{
+        width: 100% !important;
+    }
+    .namecheck{
+        width: 100% !important;
+        display: inline-block;
+        text-align: center !important;
+    }
+    .login-box-footer {
+        text-align:center !important;
+    }
+     .login-box-footer p{
+        display: flex;  
+        flex-direction: column;
+    }
+ 
+}
+/* @media screen and (max-width:800px) {
+   
+   
+   
+    
+    .namecheck{
+    }
+} */

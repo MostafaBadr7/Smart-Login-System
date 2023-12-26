@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <!--------------------------- font awesome --------------------------------->
+    <link rel="stylesheet" href="../css-Bootstrap-Fontawesome/all.min.css" />
+    <!----------------------------- Bootstrap ---------------------------------->
+    <link
+      rel="stylesheet"
+      href="../css-Bootstrap-Fontawesome/bootstrap.min.css"
+    />
+    <!-- One External stylesheet includes import function of others css files -->
+    <link rel="stylesheet" href="./CSS/index.css" />
+  </head>
+  <body class="">
+    <!----------------------- Layer till the page loaded ------------------------>
+    <div
+      id="white-loadingLayer"
+      class="layer position-absolute bg-black w-100 h-100"
+    ></div>
+    <div
+      class="main d-flex justify-content-center align-items-center flex-column text-center"
+    >
+      <!---------------------- Log out & log in buttons ------------------->
+      <div class="logout align-self-end pe-2">
+        <p class="pt-4 text-white" id="userName-welcomePage"></p>
+        <button id="btn-logOut" class="btn btn-outline-danger me-3">
+          Log out
+        </button>
+      </div>
+      <!-- ----------------------------Welcome MSG----------------------- -->
+      <p
+        class="paragraph-welcome align-self-center m-auto custom-danger d-flex justify-content-center align-items-center fs-1 shadow-lg"
+      >
+        Welcome
+      </p>
+    </div>
+    <!------------------------------ JS FILES---------------------------- -->
+    <script src="../JS-Bootstrap-Fontawesome/all.min.js"></script>
+    <script src="../JS-Bootstrap-Fontawesome/bootstrap.min.js"></script>
+    <script src="./JS/welcome.js"></script>
+  </body>
+</html>

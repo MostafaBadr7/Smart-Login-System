@@ -1,0 +1,125 @@
+/*
+ * Route - Frontend
+ * JS program Week 8
+ * Smart Login Web APP
+ * JS + Bootstrap
+ * 23/12/2023
+ * SignUp page CSS
+ */
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*............... Parts of full name guiding msgs for the user ...................*/
+   .validation-bar-name, .validation-bar-email, .validation-bar-pass {
+    font-size: 0.9rem;
+    opacity: 0 !important;
+    transition: all 2s;
+ }
+ /*..................... press on input > show check msgs ....................... */
+ #signNameInput:focus + .validation-bar-name{
+    opacity:1  !important;
+    transition: all 2s;
+ }
+
+ #signEmailInput:focus + .validation-bar-email{
+    opacity:1  !important;
+    transition: all 2s;
+ }
+ #signPassInput:focus + .validation-bar-pass{
+    opacity:1  !important;
+    transition: all 2s;
+ }
+/* -----------------------------------Input--------------------------------------- */
+ input {
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 3px;
+  padding-left: 10px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  background: none;
+  border-radius: 0;
+  color: white;
+  transition: all .15s ease;
+   /* font-family:"Ubuntu Light","Ubuntu","Ubuntu Mono","Segoe Print","Segoe UI"; */
+   margin:0 0 0px; 
+   -moz-box-shadow: inset 0 0 4px rgba(179, 35, 35, 0.2); 
+   -webkit-box-shadow: inset 0 0 4px rgba(196, 37, 37, 0.2); 
+   box-shadow: inner 0 0 4px rgba(152, 18, 18, 0.5);
+   /* box-shadow: 0 0 3px black; */
+   -webkit-border-radius: 3px; 
+   -moz-border-radius: 3px; 
+   border-radius: 7px;    
+ }
+  
+ input:focus{
+   outline: none !important;
+   border-color: red;
+   box-shadow: 0 0 10px red; }
+
+   ::selection {
+      /* Change highlight background color to black */
+      background: rgba(0, 0, 0, 0.856)
+      /* Change highlight text color to red
+      color: #f00; */
+    }
+
+    ::-ms-input-placeholder { /* Edge 12-18 */
+      color: white;
+    } 
+  
+
+ 
+    /* :focus{
+      outline: none;
+    } */
+
+   
+
+    /* ::placeholder:hover {
+      color: white;
+      opacity: 1;} Firefox
+     */
+    
+   
+    /*............................. Validation MSG ..............................*/
+    #warningBoxMsg-signout{
+      text-transform: capitalize;
+  }
+    .warning-msg-signout {
+      width: 300px;
+      height: 300px;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 75%;
+  
+      /* From https://css.glass */
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(222, 16, 16, 0.774);
+      backdrop-filter: blur(9.4px);
+      -webkit-backdrop-filter: blur(9.4px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+  
+      z-index: 999;
+      transition: all 1s;
+      opacity: 0;
+      pointer-events: none;
+  }
+  
+  .disappear {
+      opacity: 0 !important;
+      top: 25% !important;
+      display: none !important;
+      transform: scale(2, 2);
+  }
+  
+  .display {
+      opacity: 1 !important;
+      pointer-events: all;
+      top: 55% !important;
+      transition: 1s;
+  }

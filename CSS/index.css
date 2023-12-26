@@ -1,0 +1,92 @@
+/*
+* Route - Frontend 
+* JS program Week 8 
+* Smart Login Web APP 
+* JS + Bootstrap
+* 23/12/2023
+*/
+
+/* Import other CSS files*/
+@import url(./signUp.css);
+@import url(./welcome.css);
+@import url(./media.css);
+@import url(./index-media-extra.css);
+
+/* Global */
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-hue:0%;
+    --color-sat:100%;
+    --color-light:50%;
+    --main-color: #dc3545;
+    --sec-color: hsl(var(--color-hue),var(--color-sat),var(--color-light));
+}
+.custom-danger{
+    background-color: var(--main-color);
+}
+
+/* Login */
+.parent-toLogin{
+    position: absolute;
+    inset: 0;
+    background-image: url(../Images/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-box{
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.0);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.4px);
+-webkit-backdrop-filter: blur(9.4px);
+border: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+    /*............................. Validation MSG ..............................*/
+
+#warningBoxMsg{
+    text-transform: capitalize;
+}
+
+.warning-msg {
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 75%;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(222, 16, 16, 0.774);
+    backdrop-filter: blur(9.4px);
+    -webkit-backdrop-filter: blur(9.4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    z-index: 999;
+    transition: all 1s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.disappear {
+    opacity: 0 !important;
+    top: 25% !important;
+    display: none !important;
+    transform: scale(2, 2);
+}
+
+.display {
+    opacity: 1 !important;
+    pointer-events: all;
+    top: 55% !important;
+    transition: 1s;
+}
+

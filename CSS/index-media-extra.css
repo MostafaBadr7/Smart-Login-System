@@ -1,0 +1,43 @@
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Media 1 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+@media screen and (max-width:768px) {
+        /*............................. Validation MSG ..............................*/
+
+    .warning-msg {
+        width: 40% !important;
+        height: 40% !important;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.0) !important;
+        
+    }
+    #warningBoxMsg{
+        font-size: 1.5rem;
+    }
+    }
+    
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Media 2 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+@media screen and (max-width:370px) {
+            /*............................. Validation MSG ..............................*/
+
+        #warningBoxMsg{
+            font-size: 1.5rem;
+        }
+        .warning-msg {
+            width: 80% !important;
+            height: 30% !important;
+        }
+        .head-paragraph h1{
+            font-size: 1rem;
+            text-align:center !important;
+            padding: 0 !important;
+        }
+    }
+/* @media screen and (max-width:290px) {
+    .warning-msg {
+        width: 40% !important;
+        height: 20% !important;
+        /* From https://css.glass */
+        /* background: rgba(255, 255, 255, 0.0) !important;
+    }
+    } */ 
+
+    

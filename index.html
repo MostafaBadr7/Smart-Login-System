@@ -1,0 +1,84 @@
+<!--  
+* Route - Frontend
+* JS program Week 8
+* Smart Login Web APP 
+* JS + Bootstrap
+* 23/12/2023
+* Login page JS
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Login System</title>
+    <!--------------------------- font awesome --------------------------------->
+    <link rel="stylesheet" href="../css-Bootstrap-Fontawesome/all.min.css" />
+    <!----------------------------- Bootstrap ---------------------------------->
+    <link
+      rel="stylesheet"
+      href="../css-Bootstrap-Fontawesome/bootstrap.min.css"
+    />
+    <!-- One External stylesheet includes import function of others css files -->
+    <link rel="stylesheet" href="./CSS/index.css" />
+  </head>
+  <body>
+    <!----------------------- Layer till the page loaded ------------------------>
+    <div
+      id="white-loadingLayer"
+      class="layer position-absolute bg-black w-100 h-100 layer-display"
+    ></div>
+    <!-- ---------------------------------------------------------------------- -->
+    <section>
+      <main
+        class="parent-toLogin d-flex justify-content-center align-items-start pt-5 position-relative"
+      >
+        <!-- ----------------------Validation MSG after pressing submit ------------->
+        <div
+          id="warningBox"
+          class="warning-msg position-absolute bg-body-tertiary bg-opacity-50 d-flex justify-content-center align-items-center text-black px-3"
+        >
+          <h2 class="text-center" id="warningBoxMsg"></h2>
+        </div>
+        <!-------------------------------------- Login Box ------------------------->
+        <div class="login-box px-5 py-5">
+          <div class="head-paragraph pb-3">
+            <h1 class="text-white">Smart Login System</h1>
+          </div>
+          <!------------------------------------ Input Area ------------------------->
+          <div class="form d-flex flex-column justify-content-between pb-3">
+            <input
+              class="mb-2 focus-ring-dark"
+              placeholder="Enter Your Email"
+              type="email"
+              id="emailInput"
+            />
+            <input
+              class="mb-3 focus-ring-danger"
+              placeholder="Enter Your password"
+              type="password"
+              id="passInput"
+            />
+            <button id="loginBtn" class="btn btn-danger" type="submit">
+              Login
+            </button>
+          </div>
+          <div class="login-box-footer text-white">
+            <p>
+              Don’t have an account?
+              <a
+                class="fs-5 link-offset-2-hover link-danger text-decoration-none"
+                href="./signUp.html"
+                >Sign Up</a
+              >
+            </p>
+          </div>
+        </div>
+      </main>
+    </section>
+    <!------------------------------ JS FILES---------------------------- -->
+
+    <script src="../JS-Bootstrap-Fontawesome/all.min.js"></script>
+    <script src="../JS-Bootstrap-Fontawesome/bootstrap.min.js"></script>
+    <script src="./JS/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!--  
+* Route - Frontend
+* JS program Week 8
+* Smart Login Web APP 
+* JS + Bootstrap
+* 23/12/2023
+ * SignUp page JS
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Login System : Signup</title>
+        <!-- font awesome -->
+    <link rel="stylesheet" href="../css-Bootstrap-Fontawesome/all.min.css" />
+        <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../css-Bootstrap-Fontawesome/bootstrap.min.css"
+    />
+        <!-- One External stylesheet includes import function of others css files -->
+    <link rel="stylesheet" href="./CSS/index.css" />
+
+  </head>
+  <body>
+
+
+    <body>
+        <section>
+          <main
+            class="parent-toLogin d-flex justify-content-center align-items-start pt-5 "
+          >
+          <!-- ----------------------Validation MSG after pressing submit ------------->
+          <div
+          id="warningBox-signout"
+          class="warning-msg-signout  position-absolute bg-body-tertiary bg-opacity-50 d-flex justify-content-center align-items-center text-black px-3"
+        >
+          <h2 class="text-center" id="warningBoxMsg-signout"></h2>
+        </div>
+          <!--------------------------------- sign up Box --------------------------->
+            <div class="login-box px-md-5 px-sm-0">
+              <div class="head-paragraph pb-sm-3">
+                <h1 class="text-white text-center ">Smart Login System</h1>
+              </div>
+          <!------------------------------------ Input Area ------------------------->
+          <div class="form d-flex flex-column justify-content-between pb-3 ">
+                  <input
+                  class="mb-0  focus-ring-danger"
+                  placeholder="Enter Your Name"
+                  type="text"
+                  id="signNameInput"
+                  />
+                <!------------------------ Validation helping msgs ------------------>
+                <div class="validation-bar-name d-flex justify-content-around text-white mb-1 flex-sm-column flex-md-row ">
+                    <span  class="namecheck">first name</span><span class="namecheck"> second name</span><span class="namecheck">third name</span>
+                  </div>
+                <input
+                  class="  focus-ring-dark"
+                  placeholder="Enter Your Email"
+                  type="email"
+                  id="signEmailInput"
+                />
+                <!------------------------ Validation helping msgs ------------------>
+                <div class="validation-bar-email d-flex justify-content-around text-white mb-1 text-sm-start text-md-center">
+                    <span id="emailSpan">like: example.ex@yahoo.com</span>
+                  </div>
+                <input
+                  class="  focus-ring-danger"
+                  placeholder="Enter Your password"
+                  type="password"
+                  id="signPassInput"
+                />
+                <!-------------------------- Validation helping msgs ---------------->
+                <div class="validation-bar-pass d-flex flex-row flex-wrap text-white mb-1 justify-content-center m-auto ">
+                    <span class="passcheck-8-or-more px-1 w-50">8 characters or more</span><span class="passcheck-numbers px-1 w-25"> numbers</span><span class="passcheck-upper-lower px-1">lower & uppercase</span>
+                  </div>
+                  
+               
+                <button id="signBtn" class="btn btn-danger " type="submit">
+                  Sign up
+                </button>
+              </div>
+              <div class="login-box-footer text-white text-center">
+                <p>
+                    You have an account? 
+                    <a
+                    class="fs-5 link-offset-2-hover link-danger text-decoration-none"
+                    href="./index.HTML"
+                    >Sign In</a
+                  >
+                </p>
+              </div>
+            </div>
+          </main>
+          
+        </section>
+    
+    <!------------------------------ JS FILES---------------------------- -->
+
+    <script src="../JS-Bootstrap-Fontawesome/all.min.js"></script>
+    <script src="../JS-Bootstrap-Fontawesome/bootstrap.min.js"></script>
+    <script src="./JS/signUp.js"></script>
+  </body>
+</html>
