@@ -1,2 +1,2 @@
-# Smart-Login-Sysytem
+# Smart-Login-System
 JS web app
