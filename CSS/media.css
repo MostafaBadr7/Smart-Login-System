@@ -11,7 +11,7 @@
     .warning-msg-signout {
         color:#f9f9f979 !important;
         width: 40% !important;
-        height: 20% !important;
+        height: 30% !important;
         /* From https://css.glass */
         background: rgba(255, 255, 255, 0.0) !important;
     }
@@ -76,7 +76,7 @@
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Media 2 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
-@media screen and (max-width:370px) {
+@media screen and (max-width:400px) {
             /*............................. Validation MSG ..............................*/
 
     #warningBoxMsg-signout{
