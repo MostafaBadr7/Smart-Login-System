@@ -12,11 +12,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart Login System</title>
     <!--------------------------- font awesome --------------------------------->
-    <link rel="stylesheet" href="../css-Bootstrap-Fontawesome/all.min.css" />
+    <link rel="stylesheet" href="./css-Bootstrap-Fontawesome/all.min.css" />
     <!----------------------------- Bootstrap ---------------------------------->
     <link
       rel="stylesheet"
-      href="../css-Bootstrap-Fontawesome/bootstrap.min.css"
+      href="./css-Bootstrap-Fontawesome/bootstrap.min.css"
     />
     <!-- One External stylesheet includes import function of others css files -->
     <link rel="stylesheet" href="./CSS/index.css" />
@@ -35,8 +35,11 @@
         <!-- ----------------------Validation MSG after pressing submit ------------->
         <div
           id="warningBox"
-          class="warning-msg position-absolute bg-body-tertiary bg-opacity-50 d-flex justify-content-center align-items-center text-black px-3"
+          class="warning-msg position-absolute bg-body-tertiary bg-opacity-50 d-flex justify-content-center align-items-center flex-column text-black px-3"
         >
+          <div class="error-img w-25 mb-2 mt-md-3">
+            <img class="w-100" src="./Images/error1.png" alt="" />
+          </div>
           <h2 class="text-center" id="warningBoxMsg"></h2>
         </div>
         <!-------------------------------------- Login Box ------------------------->
@@ -77,8 +80,8 @@
     </section>
     <!------------------------------ JS FILES---------------------------- -->
 
-    <script src="../JS-Bootstrap-Fontawesome/all.min.js"></script>
-    <script src="../JS-Bootstrap-Fontawesome/bootstrap.min.js"></script>
+    <script src="./JS-Bootstrap-Fontawesome/all.min.js"></script>
+    <script src="./JS-Bootstrap-Fontawesome/bootstrap.min.js"></script>
     <script src="./JS/index.js"></script>
   </body>
 </html>

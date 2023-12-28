@@ -12,11 +12,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart Login System : Signup</title>
         <!-- font awesome -->
-    <link rel="stylesheet" href="../css-Bootstrap-Fontawesome/all.min.css" />
+    <link rel="stylesheet" href="./css-Bootstrap-Fontawesome/all.min.css" />
         <!-- Bootstrap -->
     <link
       rel="stylesheet"
-      href="../css-Bootstrap-Fontawesome/bootstrap.min.css"
+      href="./css-Bootstrap-Fontawesome/bootstrap.min.css"
     />
         <!-- One External stylesheet includes import function of others css files -->
     <link rel="stylesheet" href="./CSS/index.css" />
@@ -33,8 +33,11 @@
           <!-- ----------------------Validation MSG after pressing submit ------------->
           <div
           id="warningBox-signout"
-          class="warning-msg-signout  position-absolute bg-body-tertiary bg-opacity-50 d-flex justify-content-center align-items-center text-black px-3"
+          class="warning-msg-signout  position-absolute bg-body-tertiary bg-opacity-50 d-flex justify-content-center align-items-center text-black px-3 flex-column"
         >
+        <div class="error-img w-25  mb-2">
+          <img class="w-100" src="./Images/error1.png" alt="" />
+        </div>
           <h2 class="text-center" id="warningBoxMsg-signout"></h2>
         </div>
           <!--------------------------------- sign up Box --------------------------->
@@ -85,7 +88,7 @@
                     You have an account? 
                     <a
                     class="fs-5 link-offset-2-hover link-danger text-decoration-none"
-                    href="./index.HTML"
+                    href="./index.html"
                     >Sign In</a
                   >
                 </p>
@@ -97,8 +100,8 @@
     
     <!------------------------------ JS FILES---------------------------- -->
 
-    <script src="../JS-Bootstrap-Fontawesome/all.min.js"></script>
-    <script src="../JS-Bootstrap-Fontawesome/bootstrap.min.js"></script>
+    <script src="./JS-Bootstrap-Fontawesome/all.min.js"></script>
+    <script src="./JS-Bootstrap-Fontawesome/bootstrap.min.js"></script>
     <script src="./JS/signUp.js"></script>
   </body>
 </html>

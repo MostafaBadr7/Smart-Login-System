@@ -90,6 +90,6 @@ border: 1px solid rgba(255, 255, 255, 0.1);
     pointer-events: all;
     top: 55% !important;
     box-shadow: 0px 4px 30px rgba(222, 16, 16, 0.774);
-    transition:  1s, box-shadow 2s;
+    transition:  1s, box-shadow 1s;
 }
 
