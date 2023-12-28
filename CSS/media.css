@@ -5,13 +5,15 @@
     .login-box{
         position: absolute !important;
         top: 20% !important;
+        padding: 40px  !important;
+        
     }
         /*............................. Validation MSG ..............................*/
        
     .warning-msg-signout {
         color:#f9f9f979 !important;
         width: 40% !important;
-        height: 30% !important;
+        /* height: 30% !important; */
         /* From https://css.glass */
         background: rgba(255, 255, 255, 0.0) !important;
     }
@@ -28,14 +30,16 @@
 .validation-bar-name, .validation-bar-email, .validation-bar-pass {
     flex-direction: column !important;
     align-items: center !important;
-    justify-content:flex-end !important;
+    justify-content:center !important;
     flex-wrap: wrap !important;
     text-align: center !important;
     width: 100%;
     font-size: 0.9rem;
     transition: all 2s;
     position: absolute;
-    top:-30%;
+    top:-15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
      }
  .validation-bar-name{
     justify-content:center !important;
@@ -70,6 +74,9 @@
 .passcheck-8-or-more{
     width: 100% !important;
 }
+.error-img{
+    width: 30% !important;
+}
 
 
 }
@@ -85,9 +92,15 @@
     }
     .warning-msg-signout {
         width: 60% !important;
-        height: 20% !important;
+        /* height: 20% !important; */
         color:#f9f9f9
     }
+    .error-img{
+        width: 40% !important;
+    }
+  .login-box{
+    width: 80%;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Media 3 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
@@ -110,7 +123,7 @@
 
     /*................................smart login system h1 Signup page .......................................*/
     .head-paragraph h1{
-        font-size: 1rem;
+        font-size: 5rem;
         text-align:center !important;
         padding: 0 !important;
     }
