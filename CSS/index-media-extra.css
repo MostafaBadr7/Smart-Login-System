@@ -20,6 +20,7 @@
 
         #warningBoxMsg{
             font-size: 1.5rem;
+            color:#f9f9f979 !important;
         }
         .warning-msg {
             width: 80% !important;
