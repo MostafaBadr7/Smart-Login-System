@@ -59,18 +59,18 @@ border: 1px solid rgba(255, 255, 255, 0.1);
 
 .warning-msg {
     width: 300px;
-    height: 300px;
     transform: translate(-50%, -50%);
     left: 50%;
-    top: 95%;
+    top: 70%;
 
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(222, 16, 16, 0.774);
+    box-shadow: 0 0px 0px rgba(222, 16, 16, 0.774);
     backdrop-filter: blur(9.4px);
     -webkit-backdrop-filter: blur(9.4px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+    
 
     z-index: 999;
     transition: all 1s;
@@ -89,6 +89,7 @@ border: 1px solid rgba(255, 255, 255, 0.1);
     opacity: 1 !important;
     pointer-events: all;
     top: 55% !important;
-    transition: 1s;
+    box-shadow: 0px 4px 30px rgba(222, 16, 16, 0.774);
+    transition:  1s, box-shadow 2s;
 }
 
