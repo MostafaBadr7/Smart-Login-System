@@ -17,6 +17,7 @@ var warningBoxMsgSignout = document.getElementById("warningBoxMsg-signout");
 // Array from Parts of full name guiding msgs for the user
 var nameSpanArr = Array.from(document.querySelectorAll(".namecheck"));
 var usersArr = []; //Array to save registered users
+
 if (localStorage.getItem("users") != null) {
   usersArr = JSON.parse(localStorage.getItem("users"));
 }
@@ -38,6 +39,9 @@ signBtn.addEventListener("click", () => {
     usersArr.push(userObject);
     localStorage.setItem("users", JSON.stringify(usersArr));
     alertMsg("Registered Successfully");
+    setTimeout(() => {
+      window.open("index.html");
+    }, 2000);
   }
 });
 
@@ -49,15 +53,27 @@ function signupValidation() {
     alertMsg("Please Enter Your Name");
     return false;
   } else if (nameRegex.test(signNameInput.value) == false) {
-    alertMsg("Please Enter Your Full Name");
+    alertMsg("Please Enter a<br> valid & Full Name");
     return false;
   }
   if (!signEmailInput.value) {
     alertMsg("Please enter your email");
     return false;
   } else if (emailRegex.test(signEmailInput.value) == false) {
-    alertMsg("Please enter a valid email");
+    alertMsg("Please enter<br> a valid email");
     return false;
+  } else if (localStorage.getItem("users") != null) {
+    console.log("hi1");
+
+    for (let i = 0; i < usersArr.length; i++) {
+      console.log(usersArr[i].userEmail);
+      console.log(signEmailInput.value);
+      if (usersArr[i].userEmail == signEmailInput.value) {
+        console.log("hi");
+        alertMsg("Email already exist!<br> Please sign in");
+        return false;
+      }
+    }
   }
   if (!signPassInput.value) {
     alertMsg("Please enter your Password");
@@ -74,14 +90,19 @@ signNameInput.addEventListener("keydown", (e) => {
   //............................................ for on name parts msgs ...........................................
   for (var i = 0; i < document.querySelectorAll(".namecheck").length; i++) {
     var namePart = signNameInput.value.split(" ")[i]; //part of the fullname after each space
+    var checkIcons = document.querySelectorAll(".check-icon-names");
 
     //if name 3 letters & not undified - bcase if still didn't enter the full name we will have undefined values while keydown
     if (/^[a-zA-Z]{3,}/.test(namePart) && namePart != undefined) {
       nameSpanArr[i].style.color = "lightgreen"; // Green means correct
+      checkIcons[i].style.opacity = 1;
+      console.log(checkIcons[i]);
     } else {
       nameSpanArr[i].style.color = "white";
+      checkIcons[i].style.opacity = 0;
       if (!signNameInput.value) {
         nameSpanArr[i].style.color = "white";
+        checkIcons[i].style.opacity = 0;
       }
     }
   }
@@ -92,6 +113,7 @@ signNameInput.addEventListener("keyup", (e) => {
   for (var i = 0; i < document.querySelectorAll(".namecheck").length; i++) {
     if (!signNameInput.value) {
       nameSpanArr[i].style.color = "white";
+      checkIcons[i].style.opacity = 0;
     }
   }
 });
@@ -99,12 +121,16 @@ signNameInput.addEventListener("keyup", (e) => {
 //................................................ same story but for the email...................................
 signEmailInput.addEventListener("keydown", (e) => {
   var emailSpan = document.getElementById("emailSpan");
+  var checkIcons = document.querySelectorAll(".check-icon-email");
   if (emailRegex.test(signEmailInput.value)) {
     emailSpan.style.color = "lightgreen";
+    checkIcons[i].style.opacity = 1;
   } else {
     emailSpan.style.color = "white !important";
+    checkIcons[i].style.opacity = 0;
     if (!signNameInput.value) {
       emailSpan.style.color = "white !important";
+      checkIcons[i].style.opacity = 0;
     }
   }
 });
@@ -112,29 +138,40 @@ signEmailInput.addEventListener("keydown", (e) => {
 //....................................................... Also on the keyup ..........................................
 signEmailInput.addEventListener("keyup", (e) => {
   var emailSpan = document.getElementById("emailSpan");
+  var checkIcons = document.querySelector(".check-icon-email");
+
   if (emailRegex.test(signEmailInput.value)) {
     emailSpan.style.color = "lightgreen";
+    checkIcons.style.opacity = 1;
   } else {
-    emailSpan.style.color = "white !important";
+    emailSpan.style.color = "white ";
+    checkIcons.style.opacity = 0;
     if (!signNameInput.value) {
-      emailSpan.style.color = "white !important";
+      emailSpan.style.color = "white ";
+      checkIcons.style.opacity = 0;
     }
   }
 });
 
 //.................................................. same story but for the password ...............................
 signPassInput.addEventListener("keyup", (e) => {
+  var checkIcons = document.querySelectorAll(".check-icon-pwd");
+
   //Must have numbers
   if (/(.?\d.?)+/.test(signPassInput.value)) {
     document.querySelector(".passcheck-numbers").style.color = "lightgreen";
+    checkIcons[1].style.opacity = 1;
   } else {
     document.querySelector(".passcheck-numbers").style.color = "";
+    checkIcons[1].style.opacity = 0;
   }
   //More than 7 characters
   if (signPassInput.value.length > 7) {
     document.querySelector(".passcheck-8-or-more").style.color = "lightgreen";
+    checkIcons[0].style.opacity = 1;
   } else {
     document.querySelector(".passcheck-8-or-more").style.color = "";
+    checkIcons[0].style.opacity = 0;
   }
   //Must lower and upper cases
   if (
@@ -142,8 +179,10 @@ signPassInput.addEventListener("keyup", (e) => {
     /.?[a-z]+.?/.test(signPassInput.value)
   ) {
     document.querySelector(".passcheck-upper-lower").style.color = "lightgreen";
+    checkIcons[2].style.opacity = 1;
   } else {
     document.querySelector(".passcheck-upper-lower").style.color = "";
+    checkIcons[2].style.opacity = 0;
   }
 });
 

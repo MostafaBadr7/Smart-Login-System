@@ -7,13 +7,13 @@
         height: 40% !important;
         /* From https://css.glass */
         background: rgba(255, 255, 255, 0.0) !important;
-        
     }
     #warningBoxMsg{
         font-size: 1.5rem;
+        color:#f9f9f979 !important;
     }
     }
-    
+
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Media 2 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 @media screen and (max-width:370px) {
             /*............................. Validation MSG ..............................*/
@@ -24,7 +24,9 @@
         .warning-msg {
             width: 80% !important;
             height: 30% !important;
+            color:white !important;
         }
+        /*...............................smart login system h1 ......................................*/
         .head-paragraph h1{
             font-size: 1rem;
             text-align:center !important;

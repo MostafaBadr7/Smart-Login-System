@@ -1,9 +1,15 @@
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Media 1 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
 @media screen and (max-width:768px) {
-        /*............................. Validation MSG ..............................*/
 
+    .login-box{
+        position: absolute !important;
+        top: 20% !important;
+    }
+        /*............................. Validation MSG ..............................*/
+       
     .warning-msg-signout {
+        color:#f9f9f979 !important;
         width: 40% !important;
         height: 20% !important;
         /* From https://css.glass */
@@ -27,14 +33,22 @@
     text-align: center !important;
     width: 100%;
     font-size: 0.9rem;
-    /* display: none !important; */
     transition: all 2s;
     position: absolute;
-    top:110%
- }
+    top:-30%;
+     }
  .validation-bar-name{
-    display: flex !important;
-    justify-content: center !important;
+    justify-content:center !important;
+    text-align: start !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    align-items: center !important;
+}
+.namecheck{
+    margin-right: 10px;
+} 
+.passcheck-numbers{
+    width: 100% !important;
 }
   /*................................. press on input > show check msgs ....................... */
 
@@ -56,11 +70,8 @@
 .passcheck-8-or-more{
     width: 100% !important;
 }
-.namecheck{
-    width: 55% !important;
-    display: inline-block;
-    text-align: center !important;
-}
+
+
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Media 2 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
@@ -70,10 +81,12 @@
 
     #warningBoxMsg-signout{
         font-size: 1.2rem;
+        color:#f9f9f9
     }
     .warning-msg-signout {
         width: 60% !important;
         height: 20% !important;
+        color:#f9f9f9
     }
 }
 
@@ -120,14 +133,13 @@
     ::placeholder{
         font-size: 0.5rem;
     }
-    .passcheck-numbers{
+    .passcheck-numbers , .passcheck-upper-lower, .passcheck-8-or-more{
         width: 100% !important;
-    }
-    .namecheck{
-        width: 100% !important;
-        display: inline-block;
         text-align: center !important;
+        align-self: flex-start !important;
     }
+   
+   
     .login-box-footer {
         text-align:center !important;
     }
@@ -135,13 +147,6 @@
         display: flex;  
         flex-direction: column;
     }
+    
  
 }
-/* @media screen and (max-width:800px) {
-   
-   
-   
-    
-    .namecheck{
-    }
-} */

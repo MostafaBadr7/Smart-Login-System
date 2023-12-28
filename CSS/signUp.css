@@ -94,7 +94,7 @@
       height: 300px;
       transform: translate(-50%, -50%);
       left: 50%;
-      top: 75%;
+      top: 65%;
   
       /* From https://css.glass */
       background: rgba(255, 255, 255, 0.2);
@@ -123,3 +123,7 @@
       top: 55% !important;
       transition: 1s;
   }
+.check-icon-names, .check-icon-email, .check-icon-pwd{
+  transition: opacity 0.5s;
+  opacity: 0;
+}

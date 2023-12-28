@@ -15,6 +15,7 @@ body{
 .main{
     height: 100vh;
 }
+/*.............................. Paragraph of welcome page .....................*/
 .paragraph-welcome{
     width: 20%;
     height: 30%;
@@ -26,8 +27,8 @@ body{
     filter: drop-shadow(10px 10px 10px white);
     color: white;
 }
-/*  Layer till the page loaded */
 
+/*.................................  Layer till the page loaded ...................*/
 .layer-display{
     display: block;
     z-index: 9999999999;

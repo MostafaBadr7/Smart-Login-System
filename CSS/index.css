@@ -25,11 +25,12 @@
     --main-color: #dc3545;
     --sec-color: hsl(var(--color-hue),var(--color-sat),var(--color-light));
 }
+/* ................. You can change the main color from here .....................*/
 .custom-danger{
     background-color: var(--main-color);
 }
 
-/* Login */
+/*.................................. Login Area .....................................*/
 .parent-toLogin{
     position: absolute;
     inset: 0;
