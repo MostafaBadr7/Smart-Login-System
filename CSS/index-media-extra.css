@@ -1,7 +1,9 @@
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Media 1 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 @media screen and (max-width:768px) {
         /*............................. Validation MSG ..............................*/
-
+        /* .login-box{
+            position: static !important;
+        } */
     .warning-msg {
         width: 40% !important;
         height: 40% !important;
@@ -20,7 +22,6 @@
 
         #warningBoxMsg{
             font-size: 1.5rem;
-            color:#f9f9f979 !important;
         }
         .warning-msg {
             width: 80% !important;
